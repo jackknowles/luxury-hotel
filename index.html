@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css" / >
+    <title>Coastal Hotel | Luxury accomodation on the Seafront</title>
+  </head>
+  
+
+  <body>
+
+    <!-- HERO HEADER STARTS HERE ......................-->
+
+    <header class="section-hero">
+      <div class="nav-bar">
+        <div class="logo">
+          <a href="#"><img src="./content/logos/logo-white.png" alt="coastal hotel logo"></a>
+        </div>
+
+        <nav>
+          <ul class="main-nav-list">
+            <li>
+              <a class="nav-link btn--min" href="#">Rooms</a>
+            </li>
+            <li>
+              <a class="nav-link btn--min" href="#">Dining</a>
+            </li>
+            <li>
+              <a class="nav-link btn--min" href="#">Weddings</a>
+            </li>
+            <li>
+              <a class="nav-link btn--min" href="#">Events</a>
+            </li>
+            <li>
+              <a class="nav-link btn--min" href="#">Contact us</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- Hero -->
+      <div class="hero container grid grid--2-cols">
+
+        <!-- hero text -->
+        <div class="hero-text-box">
+          <h1 class="primary-heading">Luxury accomodation at <span class="golden">Coastal Hotel</span></h1>
+          <p>
+            Boasting 80 stylish rooms, all with ocean views, complementary breakfast and boutique styling. The coastal hotel is the place to visit for relaxing in luxury.
+          </p>
+          <a href="#" class="link hero-link">See our rooms &darr;</a>
+        </div>
+      </div>
+    </header>
+        
+    <main>
+      <!-- FORM START  -->
+      <section class="section-form">
+        <h2 class="booking-form--heading">Book a room</h2>
+        <form class="booking-form">
+          <label class="booking-form--label" for="check-in">Check in:</label>
+          <input class="booking-form--input" id="check-in" type="date" placeholder="check in date dd/mm/yy"></input>
+          <label class="booking-form--label" for="check-out">Check out:</label>
+          <input class="booking-form--input" id="check-out" type="date"></input>   
+
+          <label class="booking-form--label" for="adults">Adults:</label>
+          <select class="booking-form--input" id="adults">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+          </select>
+        
+          <label class="booking-form--label" for="children">Children:</label>
+          <select class="booking-form--input" id="children">
+            <option>0</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+          </select>
+      
+          <label class="booking-form--label" for="room">Room type:</label>
+          <select class="booking-form--input" id="room">
+            <option value="">--choose room type--</option>
+            <option value="standard">Standard king</option>
+            <option value="luxury">Luxury king</option>
+            <option value="Family">Family suite</option>
+            <option value="suite">Luxury suite</option>
+            <option value="Family">See all available</option>
+          </select>
+        
+          <button type="submit" form="booking-form" value="Submit" class="booking-form--btn">Find rooms</button>
+      </form>
+    </section>
+      
+      <!-- FORM END -->
+      
+      
+
+      <!-- ROOMS SECTION BEGINS ...................... -->
+      <section class="section-rooms container">
+
+        <div class="room-section-text ">
+          <h2>Our rooms</h2>
+          <p>
+            We have four room types here at Coastal hotel: Standard king, Luxury king, the Luxury suite and our family room. Each room offers superb ocean comfort and views of the ocean.
+          </p>
+        </div>
+        
+        <div class="room-cards grid">
+    
+          <article class="room-card">
+            <div class="room-img-box"></div>
+            <div class="room-text-box">
+              <h3>Standard King</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus provident libero illum. Dolore repudiandae quas eius corporis doloremque, sapiente nihil beatae consequuntur magnam, voluptas ex. Neque ipsum numquam laudantium iure.
+              </p>
+            </div>
+          </article>
+          
+          <article class="room-card">
+            <div class="room-img-box"></div>
+            <div class="room-text-box">
+              <h3>Luxury King</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus provident libero illum. Dolore repudiandae quas eius corporis doloremque, sapiente nihil beatae consequuntur magnam, voluptas ex. Neque ipsum numquam laudantium iure.#
+              </p>
+            </div>
+          </article>
+          
+          <article class="room-card">
+            <div class="room-img-box"></div>
+            <div class="room-text-box">
+              <h3>Luxury Suite</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus provident libero illum. Dolore repudiandae quas eius corporis doloremque, sapiente nihil beatae consequuntur magnam, voluptas ex. Neque ipsum numquam laudantium iure.
+              </p>
+            </div>
+          </article>
+          
+          <article class="room-card">
+            <div class="room-img-box"></div>
+            <div class="room-text-box">
+              <h3>Family suite</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus provident libero illum. Dolore repudiandae quas eius corporis doloremque, sapiente nihil beatae consequuntur magnam, voluptas ex. Neque ipsum numquam laudantium iure.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+      
+    <footer></footer>
+  </body>
+</html>

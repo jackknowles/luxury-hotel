@@ -1,0 +1,310 @@
+/*
+
+--- 01 TYPOGRAPHY SYSTEM
+
+- FONT-SIZE (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+---FONT-WEIGHTS
+  Medium: 300
+  semi-bold: 400
+  Bold: 700
+
+---LINE-HEIGHTS
+  Default: 1
+  small: 1.2 (h1)
+  medium: 1.2
+  paragraph default: 1.6
+
+---LETTER SPACING
+  0.5px
+  0.75px
+
+---BORDER RADIUS
+buttons: 3px;
+
+- SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+
+--- 02 COLORS
+- Primary: #cfb53b
+- Tints: 
+- Shades: #baa335
+- Accents: 
+- Greys: #eee #222 #333 #444;
+
+
+--- 05 SHADOWS
+
+under nav:
+0 2.4rem 4.8rem rgba(0, 0, 0, 0.075)
+
+--- 06 BORDER RADIUS
+- 9px buttons
+- 11px cards
+
+--- 07 WHITESPACE
+
+*/
+
+/* *********************** */
+/* Whole Page and Reusable */
+/* *********************** */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  line-height: 1;
+}
+
+/* Below resets rem to 10px instead of 16px but using percentage keeps it adjustable */
+html {
+  font-size: 62.5%;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: "Lato", sans-serif;
+  color: #eee;
+}
+
+.primary-heading {
+  font-size: 3.6rem;
+  margin-bottom: 3.2rem;
+  line-height: 1.2;
+  letter-spacing: 0.5px;
+  font-weight: 700;
+}
+
+.secondary-heading {
+  font-size: 3rem;
+  margin-bottom: 2.4rem;
+  color: #222;
+}
+
+.tertiary-heading {
+  font-size: 2.4rem;
+  color: #222;
+  margin-bottom: 1.6rem;
+}
+
+.golden {
+  color: #baa335;
+}
+
+.container {
+  max-width: 114rem;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  justify-content: space-between;
+}
+
+.grid--2-cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/* This is for forms - hiding input names for visual users but allowing them to be read by readers */
+.sr-only {
+  position: absolute;
+  left: -99999px;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
+/* *************************** */
+/* Main Navigation */
+/* *************************** */
+
+.nav-bar {
+  /* background-color: rgba(0, 0, 0, 0); */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 2.4rem;
+}
+
+.logo img {
+  height: 4.8rem;
+}
+
+.main-nav-list {
+  list-style: none;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: space-between;
+}
+
+.nav-link,
+.nav-link:link,
+.nav-link:visited {
+  display: block;
+  text-decoration: none;
+  font-size: 1.8rem;
+  padding: 0.8rem 1.6rem;
+  max-height: 3.6rem;
+  color: #eee;
+  font-weight: 600;
+  border-radius: 3px;
+  overflow: hidden;
+  /* transition: all 0.5s; */
+}
+
+.btn--min:hover,
+.btn--min:active {
+  border-bottom: solid 4px #cfb53b;
+  border-radius: 0;
+  padding: 0.8rem 0;
+  margin: 0 1.6rem;
+  padding-bottom: 0.3rem;
+}
+
+/* *********************** */
+/* Hero content */
+/* *********************** */
+
+.section-hero {
+  background-image: url("../content/images/hero-img.jpg"); /* fallback */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("../content/images/hero-img.jpg"); /* W3C */
+  background-size: cover;
+  background-color: #fff;
+  min-height: 100vh;
+
+  /* TO ALLOW PLACEMENT OF FORM OVER HERO */
+  position: relative;
+}
+
+.hero-text-box {
+  padding: 9.6rem 4.8rem;
+  align-content: center;
+}
+
+.hero-text-box {
+  align-self: center;
+}
+
+.hero-text-box p {
+  font-size: 2rem;
+  line-height: 1.4;
+  margin-bottom: 3.2rem;
+  justify-self: center;
+}
+
+.hero-link,
+.hero-link:link,
+.hero-link:visited {
+  color: #cfb53b;
+  text-decoration: none;
+  border-bottom: 2px solid #cfb53b;
+  font-size: 1.8rem;
+  font-weight: 500;
+  padding-bottom: 0.5rem;
+}
+
+.hero-link:hover,
+.hero-link:active {
+  color: #baa335;
+  border-bottom: 2px solid transparent;
+}
+
+/* *************************** */
+/* BOOKING FORM */
+/* *************************** */
+
+.section-form {
+  min-width: 100%;
+  display: grid;
+  justify-content: stretch;
+  position: fixed;
+  bottom: 0;
+}
+
+.booking-form {
+  /* coloring */
+  background-color: rgb(237, 237, 237);
+  color: #333;
+  font-weight: 600;
+  box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.3);
+  height: 6rem;
+
+  /* position of flex items  */
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* spacing */
+}
+
+.booking-form--label,
+.booking-form--input,
+.booking-form--btn {
+  font-family: "Lato", sans-serif;
+  font-size: 1.8rem;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.booking-form--label {
+  padding-left: 3.2rem;
+  padding-right: 0.8rem;
+}
+
+.booking-form--input {
+  height: 100%;
+  border: none;
+}
+
+.booking-form--btn {
+  font-weight: 600;
+  padding: 0.8rem 1.6rem;
+  margin-left: 3.2rem;
+  border: none;
+  height: 100%;
+  justify-self: flex-end;
+  background-color: #cfb53b;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.booking-form--btn:hover {
+  background-color: #baa335;
+}
+/* 10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 */
+
+/* ROOMS SECTION */
+
+.section-rooms {
+  background: rgb(77, 77, 77);
+  background: radial-gradient(
+    circle,
+    rgba(77, 77, 77, 0.5) 0%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  gap: 30px;
+  justify-content: center;
+}
+
+.room-section-text {
+  color: #222;
+}
+
+.room-box {
+  background-color: black;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.room-text-box {
+  background-color: green;
+  grid-column: span 2;
+  height: 200px;
+}
